@@ -10,7 +10,7 @@ router.get('/', async (req, res, next) => {
       // send everything to anyone who asks!
       attributes: ['name', 'assetUrl']
     })
-    res.json(products)
+    res.json(allProducts)
   } catch (err) {
     next(err)
   }
