@@ -1,13 +1,14 @@
 {
-  "name": "xr-store",
+  "name": "drop",
   "version": "0.0.1",
-  "description": "Progressive XR demo",
+  "description": "Progressive XR application",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "webpack-dev-server --host 0.0.0.0",
-    "lint": "semistandard -v | snazzy"
+    "start": "node server",
+    "lint": "semistandard -v | snazzy",
+    "seed": "node script/seed.js"
   },
-  "repository": "arturitu/xr-store",
+  "repository": "projectSasquatchHunter/backend",
   "license": "MIT",
   "semistandard": {
     "ignore": [
@@ -15,15 +16,48 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.50",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.1.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-es2017": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "axios-mock-adapter": "^1.15.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
     "cross-env": "^2.0.1",
+    "eslint": "^4.12.1",
     "json-loader": "^0.5.7",
+    "regenerator": "^0.13.2",
     "semistandard": "^9.0.0",
     "snazzy": "^4.0.1",
     "spritesheet-js": "^1.2.6",
-    "webpack": "^1.13.2",
+    "webpack": "^2.7.0",
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
-    "aframe-xr": "0.0.11"
+    "aframe-xr": "0.0.11",
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "connect-session-sequelize": "^5.2.2",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.0",
+    "socket.io": "^2.1.1"
   }
 }
